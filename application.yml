@@ -1,0 +1,17 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+---
+
+spring:
+  profiles: dev
+  application: 
+    name: microserviceclood-config-hhf-dev
+
+---
+
+spring:
+  profiles: sit
+  application: 
+    name: microserviceclood-config-hhf-sit
