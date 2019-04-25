@@ -1,0 +1,29 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+---
+
+server: 
+  port: 8201
+spring:
+  profiles: dev
+  application: 
+    name: microserviceclood-config-client
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+      defaultZone: http://eureka-dev.com:7001/eureka/   #Eureka单机版
+
+---  
+
+server: 
+  port: 8202
+spring:
+  profiles: sit
+  application: 
+    name: microserviceclood-config-client
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+      defaultZone: http://eureka-sit.com:7001/eureka/   #Eureka单机版
